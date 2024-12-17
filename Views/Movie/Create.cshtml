@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Crear";
+}
+@model Movie
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Crear pelicula</h1>
+    </div>
+    <div>
+        <form asp-action="Create" method="post">
+            <div class="col-md-12">
+                <label asp-for="Title">Titulo</label>
+                <input asp-for="Title" type="text" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="col-md-12">
+                <label asp-for="Genre">Genero</label>
+                <input asp-for="Genre" type="text" class="form-control" />
+                <span asp-validation-for="Genre" class="text-danger"></span>
+            </div>
+            <div class="col-md-12">
+                <label asp-for="Year">Año</label>
+                <input asp-for="Year" type="number" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div class="col-md-12">
+                <label asp-for="Description">Descripcion</label>
+                <input asp-for="Description" type="text" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <a asp-controller="Movie" asp-action="Index">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
